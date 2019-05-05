@@ -10,5 +10,13 @@ router.get('/', (req,res) =>{
 })
 
 router.post('/', (req,res)=>{
-    
+    const { inputText, columnNum} =req.body;
+    const newItem = new Item({
+        inputText,
+        columnNum
+    });
+    newItem.save()
+           .then(item=> res.json(item));
 })
+
+module.exports = router;

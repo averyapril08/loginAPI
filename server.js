@@ -14,7 +14,7 @@ mongoose.connect(db,{
 }).then(()=>{console.log('dataBase is connected')})
   .catch(err => console.log(err));
 
-//app.use('/api/items',require('./api/items'));
+app.use('/api/items',require('./api/items'));
 
 
 

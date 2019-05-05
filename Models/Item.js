@@ -2,14 +2,16 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const ItemSchema = new Schema({
-    text:{
+    inputText:{
         type: String,
         required:true
     },
-    column:{
+  
+    columnNum:{
         type:String,
         required:true
     },
+
     date:{
         type:Date,
         default:Date.now()
